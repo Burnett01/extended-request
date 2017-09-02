@@ -1,6 +1,6 @@
 {
   "name": "extended-request",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An enhanced request module for node.js that might be useful when interacting with API servers.",
   "keywords": [
     "request",
@@ -13,15 +13,15 @@
   "author": {
     "name": "Steven Agyekum@CL",
     "email": "agyekum@posteo.de",
-    "url": "https://gitlab.com/burnett01"
+    "url": "https://github.com/Burnett01"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/burnett01/extended-request.git"
+    "url": "git+https://github.com/Burnett01/extended-request.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/burnett01/extended-request/issues"
+    "url": "https://github.com/Burnett01/extended-request/issues"
   },
   "main": "dist/index.js",
   "scripts": {
