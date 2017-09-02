@@ -34,8 +34,6 @@ Features:
 
 ## API Reference
 
-### Basket:
-
 ```javascript
 ExtendedRequest(
     [Object {
