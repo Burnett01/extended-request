@@ -104,7 +104,7 @@ const api = new ExtendedRequest({
 
 ---
 
-### Perform a request
+### Performing a request
 
 **Available options:**
 
