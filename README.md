@@ -1,7 +1,7 @@
 
 # extended-request
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../master/LICENSE.MD)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../master/LICENSE.MD) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/extended-request.svg?ver=88)](https://badge.fury.io/js/extended-request)
 
 An enhanced request module for node.js that might be useful when interacting with API servers.
 
