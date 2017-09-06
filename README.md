@@ -57,6 +57,10 @@ ExtendedRequest(
         body: String='',
     } options, function(class ErrorClass err, null ok) cb] | Promise
 }
+
+/* Statics */
+
+ExtendedRequest.DEBUG = true/false
 ```
 
 ---
