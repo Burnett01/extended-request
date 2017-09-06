@@ -41,7 +41,7 @@ ExtendedRequest(
         port: String='',
         endpoint: String='',
         auth: Object { 
-            provider: String='basic|bearer|token',
+            provider: String='basic|bearer|token|postToken',
             username: String='',
             password: String='',
             token: String=''
@@ -73,9 +73,9 @@ ExtendedRequest(
 | path | URI path (eg. /get/users)
 | endpoint | ``host`` endpoint/prefix for a ``path`` (eg. /api/v1)
 | auth | Authentication details 
-|  |``.provider`` = Either basic, bearer, token' |
+|  |``.provider`` = Either 'basic, bearer, token, postToken' |
 |  |``.username`` = Set HTTP basic auth username when provider is 'basic' |
-|  |``.token`` = Set HTTP token auth when provider is 'token' or 'bearer'  |
+|  |``.token`` = <br />Set HTTP auth token when provider is 'token' or 'bearer'. <br />Set POST token when provider is 'postToken' and ``request.method`` is 'POST'  |
 
 ---
 
@@ -109,7 +109,9 @@ const api = new ExtendedRequest({
 | |  | Required | 
 | ------ | ----------- | ------ |
 | method | HTTP method (Default: GET) | No |
+| type | Content-Type (Default: 'application/json') | No |
 | body | Body for a post request | If method is 'POST' |
+| bodyType | Set specific type <br />(Default: 'application/x-www-form-urlencoded')| No|
 
 ```javascript
 api.request('/posts/1', (err, response) => {
