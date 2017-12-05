@@ -17,8 +17,7 @@ Features:
 
 # Table of contents
 * [API Reference](#api-reference)
-  * [Basket](#basket)
-  * [Product](#product)
+  * [ExtendedRequest](#extendedrequest)
 * [Property Reference](#property-reference)
 * [Function Reference](#function-reference)
   * [Creating a request container](#creating-a-request-container)
