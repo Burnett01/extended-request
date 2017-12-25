@@ -53,6 +53,8 @@ ExtendedRequest(
     /* Methods */
     request:  [String=path, Object {
         method: String='GET|POST|HEAD|...',
+        type: String='text/plain|application/json|...',
+        bodyType: String='application/x-www-form-urlencoded|application/json|...',
         body: String='',
     } options, function(class ErrorClass err, null ok) cb] | Promise
 }
@@ -75,6 +77,9 @@ ExtendedRequest.DEBUG = true/false
 |  | 443 enables https |
 | path | URI path (eg. /get/users)
 | endpoint | ``host`` endpoint/prefix for a ``path`` (eg. /api/v1)
+| type | The HTTP Content-Type for the request. Check lib/util.js for valid types Default is BT.JSON
+| body | POST payload
+| bodyType | The type of the body payload. Check lib/util.js for valid types. Default is BT.FORM
 | auth | Authentication details 
 |  |``.provider`` = Either 'basic, bearer, token, postToken' |
 |  |``.username`` = Set HTTP basic auth username when provider is 'basic' |
@@ -97,7 +102,6 @@ ExtendedRequest.DEBUG = true/false
 | auth | Authentication details | No |
 
 ```javascript
-//=> ES6
 const api = new ExtendedRequest({
   host: 'jsonplaceholder.typicode.com',
   port: 443
