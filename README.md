@@ -78,6 +78,7 @@ ExtendedRequest.DEBUG = true/false
 | auth | Authentication details 
 |  |``.provider`` = Either 'basic, bearer, token, postToken' |
 |  |``.username`` = Set HTTP basic auth username when provider is 'basic' |
+|  |``.password`` = Set HTTP basic auth password when provider is 'basic' |
 |  |``.token`` = <br />Set HTTP auth token when provider is 'token' or 'bearer'. <br />Set POST token when provider is 'postToken' and ``request.method`` is 'POST'  |
 
 ---
