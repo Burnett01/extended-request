@@ -25,7 +25,10 @@ Features:
 * [Setup / Install](#setup-install)
 * [Build](#build)
   * [NPM](#npm)
+  * [Make](#make)
 * [Unit-Tests](#unit-tests)
+  * [NPM](#npm-1)
+  * [Make](#make-1)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -185,7 +188,19 @@ var ExtendedRequest = require('extended-request').default
 
 ## Unit-Tests
 
-Later.
+The testing-framework used by this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
+
+* test/test.default.js `Performs 1 tests` | [Source](../master/test/test.default.js)
+
+Default reporter: `list`
+
+### Make
+
+```make test```
+
+### NPM
+
+```npm test```
 
 ---
 
