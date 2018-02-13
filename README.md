@@ -1,7 +1,7 @@
 
 # extended-request
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../master/LICENSE.MD) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/extended-request.svg?ver=88)](https://badge.fury.io/js/extended-request)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/extended-request.svg?ver=88)](https://badge.fury.io/js/extended-request)
 
 An enhanced request module for node.js that might be useful when interacting with API servers.
 
@@ -12,12 +12,12 @@ Features:
   * GZIP compression
   * ES6 & ES5 support
   * Promises & classic nodeback
+  * Debugging
 
 ---
 
 # Table of contents
 * [API Reference](#api-reference)
-  * [ExtendedRequest](#extendedrequest)
 * [Property Reference](#property-reference)
 * [Function Reference](#function-reference)
   * [Creating a request container](#creating-a-request-container)
@@ -37,7 +37,7 @@ Features:
 ExtendedRequest(
     [Object {
         host: String='',
-        port: String='',
+        port: Number='',
         endpoint: String='',
         auth: Object { 
             provider: String='basic|bearer|token|postToken',
@@ -133,7 +133,7 @@ api.request('/store/post', {
   console.log(err, response)
 })
 
-/* Promise */
+/* Promises */
 
 api.request('/posts/1')
 .then((response) => {
@@ -162,7 +162,11 @@ api.request('/store/post', {
 Use `npm install extended-request` 
 
 ```javascript
-import ExtendedRequest from 'extended-request';
+// ES6
+import ExtendedRequest from 'extended-request'
+
+// ES5
+var ExtendedRequest = require('extended-request').default
 ```
 
 ---
@@ -172,6 +176,10 @@ import ExtendedRequest from 'extended-request';
 ### NPM
 
 ```npm run build```
+
+### Make
+
+```make build```
 
 ---
 
