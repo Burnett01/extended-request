@@ -190,7 +190,7 @@ var ExtendedRequest = require('extended-request').default
 
 The testing-framework used by this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
 
-* test/test.default.js `Performs 1 tests` | [Source](../master/test/test.default.js)
+* test/test.default.js `Performs 3 tests` | [Source](../master/test/test.default.js)
 
 Default reporter: `list`
 
