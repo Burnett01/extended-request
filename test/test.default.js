@@ -22,10 +22,10 @@
 *
 */
 
-import { expect } from 'chai';
+import { expect } from 'chai'
 import ExtendedRequest from '../lib/index'
 
-let api = undefined;
+let api = undefined
 
 describe('Extended Request [TEST]', () => {
 
@@ -34,45 +34,45 @@ describe('Extended Request [TEST]', () => {
     api = new ExtendedRequest( {
       host: 'jsonplaceholder.typicode.com',
       port: 443
-    });
+    })
 
-    expect(api).to.be.a('object');
+    expect(api).to.be.a('object')
 
-    expect(api).to.have.property('host');
-    expect(api).to.have.property('port');
-    expect(api).to.have.property('endpoint');
-    expect(api).to.have.property('auth');
-    expect(api).to.have.property('request');
+    expect(api).to.have.property('host')
+    expect(api).to.have.property('port')
+    expect(api).to.have.property('endpoint')
+    expect(api).to.have.property('auth')
+    expect(api).to.have.property('request')
 
-    expect(api.request).to.be.a('function');
+    expect(api.request).to.be.a('function')
 
-    done();
-  });
+    done()
+  })
 
   it('performs a GET request w (nodeback)', done => {
     
     api.request('/posts/1', (err, response) => {
       expect(err).to.be.null
-      expect(response).to.be.a('object');
-      expect(response).to.have.property('userId');
-      done();
+      expect(response).to.be.a('object')
+      expect(response).to.have.property('userId')
+      done()
     })
 
-  });
+  })
 
   it('performs a GET request w (promises)', done => {
     
     api.request('/posts/1')
     .then((response) => {
-      expect(response).to.be.a('object');
-      expect(response).to.have.property('userId');
-      done();
+      expect(response).to.be.a('object')
+      expect(response).to.have.property('userId')
+      done()
     })
     .catch((err) => {
       expect(err).to.be.null
-      done();
+      done()
     })
 
-  });
+  })
 
-});
+})
