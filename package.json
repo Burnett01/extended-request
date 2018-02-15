@@ -1,6 +1,6 @@
 {
   "name": "extended-request",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "An enhanced request module for node.js that might be useful when interacting with API servers.",
   "keywords": [
     "request",
