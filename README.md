@@ -169,7 +169,7 @@ Use `npm install extended-request`
 import ExtendedRequest from 'extended-request'
 
 // ES5
-var ExtendedRequest = require('extended-request').default
+var ExtendedRequest = require('extended-request')
 ```
 
 ---
