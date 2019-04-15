@@ -6,7 +6,7 @@
 An enhanced request module for node.js that might be useful when interacting with API servers.
 
 Features:
-  * Supports various auth providers (Basic, Bearer, Token, ..)
+  * Supports various auth providers (Basic, Bearer, Token, PostToken, Custom ..)
   * Supports HTTP and HTTP/S (TLS) protocols
   * Auto response content-type negotiation (JSON, HTML, Plain, ...)
   * GZIP compression
@@ -43,10 +43,11 @@ ExtendedRequest(
         port: Number='',
         endpoint: String='',
         auth: Object { 
-            provider: String='basic|bearer|token|postToken',
+            provider: String='basic|bearer|token|postToken|custom',
             username: String='',
             password: String='',
-            token: String=''
+            token: String='',
+            custom: String=''
         }
     } details]
 ) -> Object {
@@ -84,10 +85,11 @@ ExtendedRequest.DEBUG = true/false
 | body | POST payload
 | bodyType | The type of the body payload. Check lib/util.js for valid types. Default is BT.FORM
 | auth | Authentication details 
-|  |``.provider`` = Either 'basic, bearer, token, postToken' |
+|  |``.provider`` = Either 'basic, bearer, token, postToken, custom' |
 |  |``.username`` = Set HTTP basic auth username when provider is 'basic' |
 |  |``.password`` = Set HTTP basic auth password when provider is 'basic' |
-|  |``.token`` = <br />Set HTTP auth token when provider is 'token' or 'bearer'. <br />Set POST token when provider is 'postToken' and ``request.method`` is 'POST'  |
+|  |``.token`` = <br />Set HTTP auth token (header) when provider is 'token' or 'bearer'. <br />Set POST token when provider is 'postToken' and ``request.method`` is 'POST'  |
+|  |``.custom`` = <br />Set HTTP auth header when provider is 'custom' |
 
 ---
 
