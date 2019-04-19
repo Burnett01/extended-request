@@ -125,6 +125,7 @@ const api = new ExtendedRequest({
 | type | Content-Type (Default: 'application/json') | No |
 | body | Body for a post request | If method is 'POST' |
 | bodyType | Set specific type <br />(Default: 'application/x-www-form-urlencoded')| No|
+| headers | Set optional headers object | No|
 
 ```javascript
 api.request('/posts/1', (err, response) => {
