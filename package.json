@@ -1,5 +1,5 @@
 {
-  "name": "extended-request",
+  "name": "@burnett01/extended-request",
   "version": "1.4.0",
   "description": "An enhanced request module for node.js that might be useful when interacting with API servers.",
   "keywords": [
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Burnett01/extended-request.git"
+    "url": "ssh://git@github.com/Burnett01/extended-request.git"
   },
   "bugs": {
     "url": "https://github.com/Burnett01/extended-request/issues"
