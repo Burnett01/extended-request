@@ -75,4 +75,4 @@ describe('Extended Request [TEST]', () => {
 
   })
 
-})
+}).timeout(7000)
