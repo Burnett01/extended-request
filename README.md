@@ -1,7 +1,7 @@
 
 # extended-request
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/extended-request.svg?ver=88)](https://badge.fury.io/js/extended-request)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/%40burnett01%2Fextended-request.svg)](https://badge.fury.io/js/%40burnett01%2Fextended-request)
 
 An enhanced request module for node.js that might be useful when interacting with API servers.
 
@@ -165,14 +165,14 @@ api.request('/store/post', {
 
 ## Setup / Install
 
-Use `npm install extended-request` 
+Use `npm install @burnett01/extended-request` 
 
 ```javascript
 // ES6
-import ExtendedRequest from 'extended-request'
+import ExtendedRequest from '@burnett01/extended-request'
 
 // ES5
-var ExtendedRequest = require('extended-request')
+var ExtendedRequest = require('@burnett01/extended-request')
 ```
 
 ---
