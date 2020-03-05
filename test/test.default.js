@@ -25,15 +25,18 @@
 import { expect } from 'chai'
 import ExtendedRequest from '../lib/index'
 
+const timeout = 7000
 let api = undefined
+let host = 'jsonplaceholder.typicode.com'
+let port = 443
 
 describe('Extended Request [TEST]', () => {
 
   it('creates an api instance', done => {
 
     api = new ExtendedRequest( {
-      host: 'jsonplaceholder.typicode.com',
-      port: 443
+      host,
+      port
     })
 
     expect(api).to.be.a('object')
@@ -58,7 +61,7 @@ describe('Extended Request [TEST]', () => {
       done()
     })
 
-  })
+  }).timeout(timeout)
 
   it('performs a GET request w (promises)', done => {
     
@@ -73,6 +76,80 @@ describe('Extended Request [TEST]', () => {
       done()
     })
 
+  }).timeout(timeout)
+
+  it('changes host of api instance', done => {
+
+    host = 'httpstat.us'
+    api = new ExtendedRequest( {
+      host,
+      port
+    })
+    
+    expect(api.host).to.equal(host)
+    done()
+
   })
 
-}).timeout(7000)
+  it('performs a GET request and expects 302 response', done => {
+
+    api.request('/302', (err, response) => {
+      expect(err).to.be.a('object')
+      expect(err).to.have.property('code')
+      expect(err.code).to.equal(302)
+      expect(response).to.be.null
+      done()
+    })
+
+  }).timeout(timeout)
+
+  it('performs a GET request and expects 403 response', done => {
+
+    api.request('/403', (err, response) => {
+      expect(err).to.be.a('object')
+      expect(err).to.have.property('code')
+      expect(err.code).to.equal(403)
+      expect(response).to.be.null
+      done()
+    })
+
+  }).timeout(timeout)
+
+  it('performs a GET request and expects 503 response', done => {
+
+    api.request('/503', (err, response) => {
+      expect(err).to.be.a('object')
+      expect(err).to.have.property('code')
+      expect(err.code).to.equal(503)
+      expect(response).to.be.null
+      done()
+    })
+
+  }).timeout(timeout)
+
+  it('changes host of api instance', done => {
+
+    host = 'invalidhost'
+    api = new ExtendedRequest( {
+      host,
+      port
+    })
+    
+    expect(api.host).to.equal(host)
+    done()
+
+  })
+
+  it('performs a GET request and expects networking error', done => {
+
+    api.request('/invalid', (err, response) => {
+      expect(err).to.be.a('object')
+      expect(err).to.have.property('code')
+      expect(err.code).to.equal('ENOTFOUND')
+      expect(response).to.be.null
+      done()
+    })
+
+  }).timeout(timeout)
+
+})
