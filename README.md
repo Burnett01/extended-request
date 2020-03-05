@@ -3,7 +3,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/%40burnett01%2Fextended-request.svg)](https://badge.fury.io/js/%40burnett01%2Fextended-request)
 
-An enhanced request module for node.js that might be useful when interacting with API servers.
+An enhanced request module for node.js for REST-/API servers.
 
 Features:
   * Supports various auth providers (Basic, Bearer, Token, PostToken, Custom ..)
@@ -193,7 +193,7 @@ var ExtendedRequest = require('@burnett01/extended-request')
 
 The testing-framework used by this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
 
-* test/test.default.js `Performs 3 tests` | [Source](../master/test/test.default.js)
+* test/test.default.js `Performs 9 tests` | [Source](../master/test/test.default.js)
 
 Default reporter: `list`
 
