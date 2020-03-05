@@ -1,14 +1,17 @@
 {
   "name": "@burnett01/extended-request",
-  "version": "1.5.0",
-  "description": "An enhanced request module for node.js that might be useful when interacting with API servers.",
+  "version": "1.6.0",
+  "description": "An enhanced request module for node.js for REST-/API servers.",
   "keywords": [
     "request",
     "manager",
     "lightweight",
     "es6",
     "promise",
-    "node"
+    "node",
+    "api",
+    "apis",
+    "rest"
   ],
   "author": {
     "name": "Steven Agyekum@CL",
