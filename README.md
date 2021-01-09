@@ -1,7 +1,7 @@
 
 # extended-request
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/extended-request.svg?branch=master)](https://travis-ci.org/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/%40burnett01%2Fextended-request.svg)](https://badge.fury.io/js/%40burnett01%2Fextended-request)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.com/Burnett01/extended-request.svg?branch=master)](https://travis-ci.com/Burnett01/extended-request) [![npm version](https://badge.fury.io/js/%40burnett01%2Fextended-request.svg)](https://badge.fury.io/js/%40burnett01%2Fextended-request)
 
 An enhanced request module for node.js for REST-/API servers.
 
